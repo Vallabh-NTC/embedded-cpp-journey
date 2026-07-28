@@ -8,7 +8,7 @@ std::string message(std::string line) {
 
 std::string log_level(std::string line) {
     // return the log level
-    return line.substr(line.find("[")+1, line.find("]")-1);
+    return line.substr(line.find("[")+1, line.find("]")-line.find("[")-1);
 }
 
 std::string reformat(std::string line) {
