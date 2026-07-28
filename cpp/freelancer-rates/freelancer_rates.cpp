@@ -20,7 +20,7 @@ double apply_discount(double before_discount, double discount) {
 int monthly_rate(double hourly_rate, double discount) {
     // TODO: Implement a function to calculate the monthly rate, and apply a
     // discount.
-    return ceil(apply_discount((daily_rate(hourly_rate)*22), discount));
+    return static_cast<int>(std::ceil(apply_discount((daily_rate(hourly_rate)*22), discount)));
 }
 
 // days_in_budget calculates the number of workdays given a budget, hourly rate,
@@ -29,5 +29,5 @@ int monthly_rate(double hourly_rate, double discount) {
 int days_in_budget(int budget, double hourly_rate, double discount) {
     // TODO: Implement a function that takes a budget, an hourly rate, and a
     // discount, and calculates how many complete days of work that covers.
-    return floor(budget/apply_discount(daily_rate(hourly_rate), discount));
+    return static_cast<int>(std::floor(budget/apply_discount(daily_rate(hourly_rate), discount)));
 }
