@@ -5,3 +5,7 @@
 **/cmake_install.cmake
 **/Makefile
 **/Testing/
+
+# Build artifacts
+*.o
+**/tests
